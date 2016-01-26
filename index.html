@@ -1,1 +1,280 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Audrey Thompson's Website</title>
+		<script src="jquery-1.11.3.js"></script>
+	</head>
+	<body background="https://c2.staticflickr.com/6/5173/5436446554_9244788c36_b.jpg">
+		<div id="mainDiv">
+			<h1 class="mainTextH">AUDREY THOMPSON</h1>
+		</div>
+		
+		<div id="projectsLinkDiv">
+				<a href="AudreysPage.html" class="menuText" id="projectsText">Projects</p>
+		</div>
+		
+		<div id="aboutLinkDiv">
+			<p></p>
+			<a href="AudreysPage.html" class="menuText">About me</a>
+		</div>
+		
+		<div id="homeLinkDiv">
+			<p></p>
+			<a href="AudreysPage.html" class="menuText" id="homeText">Home</a>
+		</div>
+		
+		<div id="contactLinkDiv">
+				<a href="mailto:athompson@sageridge.org" class="menuText" id="contactText">Contact</a>
+		</div>
+		
+		<script>
+			$(document).ready();
+			$( "#mainDiv" ).mouseenter(function() {
+				$( "#aboutLinkDiv" ).animate({
+					left: "-=103px",
+				}, 500, function() {
+				});		
+				
+				$( "#homeLinkDiv" ).animate({
+					left: "+=103px",
+				}, 500, function() {
+				});	
+				
+				$( "#contactLinkDiv" ).delay(500);
+				$( "#contactLinkDiv" ).animate({
+					left: "+=156px",
+				}, 500, function() {
+				});	 
+				
+				$( "#projectsLinkDiv" ).delay(500);
+				$( "#projectsLinkDiv" ).animate({
+					left: "-=156px",
+				}, 500, function() {
+				});	 
+			});
+			
+			$( "#aboutLinkDiv" ).mouseenter(function() {
+				$( "#aboutLinkDiv" ).delay(1000);
+			});
+			
+			$( "#aboutLinkDiv" ).mouseleave(function() {
+				$( "#aboutLinkDiv" ).clearQueue();
+				$( "#aboutLinkDiv" ).delay(1500);
+				$( "#aboutLinkDiv" ).animate({
+					left: "+=103px",
+					}, 500, function() {
+				});				
+			});
+
+			$( "#mainDiv" ).mouseleave(function() {
+				$( "#contactLinkDiv" ).delay(1000);
+				$( "#contactLinkDiv" ).animate({
+					left: "-=156px",
+				}, 500, function() {
+				});
+		
+				$( "#projectsLinkDiv" ).delay(1000);
+				$( "#projectsLinkDiv" ).animate({
+					left: "+=156px",
+				}, 500, function() {
+				});
+				
+				$( "#aboutLinkDiv" ).delay(1500);
+				$( "#aboutLinkDiv" ).animate({
+					left: "+=103px",
+				}, 500, function() {
+				});
+				
+				$( "#homeLinkDiv" ).delay(1500);
+				$( "#homeLinkDiv" ).animate({
+					left: "-=103px",
+				}, 500, function() {
+				});
+			});
+		</script>
+		
+		<style>	
+			.captionDiv {
+				background-color: black;
+				width: 10px;
+				height: 10px;
+				border: white solid;
+				position: absolute;
+				border-radius: 600px;
+				text-align: center;
+			}
+			
+			#fishCaption {
+				font-size: 0px;
+				margin-left: 200px;
+				margin-top: 300px;
+			}
+			
+			#arduinoCaption {
+				font-size: 0px;
+				margin-left: 500px;
+				margin-top: 500px;
+			}
+			
+			#scribCaption {
+				font-size: 0px;
+				margin-left: 900px;
+				margin-top: 400px;
+			}
+			
+			#projectsLinkDiv {
+				z-index: 0;
+				background-color: black;
+				position: absolute;
+				text-align: center; 
+				left: 50%;
+				top: 50%;
+				margin-left: -160px; /* -316 */
+				margin-top: -25px; 
+				width: 50px;
+				height: 50px;
+				border: white solid;
+				border-radius: 6000px;
+			}
+			
+			#aboutLinkDiv {
+				z-index: 1;
+				background-color: black;
+				position: absolute;
+				text-align: center; 
+				left: 50%;
+				top: 50%;
+				margin-left: -160px; /* -263 */
+				margin-top: -50px;
+				width: 100px;
+				height: 100px;
+				border: white solid;
+				border-radius: 6000px;
+			}
+			
+			#homeLinkDiv {
+				z-index: 1;
+				background-color: black;
+				position: absolute;
+				text-align: center; 
+				left: 50%;
+				top: 50%;
+				margin-left: 60px; /* 163 */
+				margin-top: -50px;
+				width: 100px;
+				height: 100px;
+				border: white solid;
+				border-radius: 6000px;
+			}
+			
+			#contactLinkDiv {
+				z-index: 0;
+				background-color: black;
+				position: absolute;
+				text-align: center; 
+				left: 50%;
+				top: 50%;
+				margin-left: 110px; /* 266 */
+				margin-top: -25px;
+				width: 50px;
+				height: 50px;
+				border: white solid;
+				border-radius: 6000px;
+			}
+			
+			#projectsText {
+				top: 27px;
+				margin-left: -21px;
+			}
+			
+			#homeText {
+				margin-left: -17px;
+			}
+			
+			#contactText {
+				top: 27px;
+				margin-left: -21px;
+			}
+			
+			.menuText {
+				text-decoration: none;
+				position: absolute;
+				color: white;	
+				font-family: Arial;
+				top: 50%;
+				margin-top: -10px;
+				margin-left: -25px;
+				text-align: center;
+				font-size: 75%;
+			}
+			
+			#mainDiv {
+				z-index: 2;
+				background-color: black;
+				position: absolute;
+				text-align: center; 
+				width: 320px;
+				height: 320px;
+				display: block;
+				top: 50%;
+				left: 50%;
+				margin-left: -160px;
+				margin-top: -160px;
+				border: white solid;
+				border-radius: 6000px;
+			}
+					
+			.mainTextH {
+				position: absolute;
+				text-align: center;
+				color: white;
+				font-family: Arial;
+				font-weight: 20;
+				font-size: 28px;
+				top: 50%;
+				margin-top: -15px;
+				margin-left: 15px;
+			}
+			
+			.mainTextP {
+				text-align: center;
+				color: white;
+				font-family: Arial;
+				font-weight: 20;
+			}
+			
+			.picDiv {
+				width: 10px;
+				height: 10px;
+				position: absolute; 
+				border-radius:600px;
+				margin-top: 500px;
+				z-index: 1;
+			}
+			
+			#fishDiv {
+				background-image: url("FishTankScreenshot.png");
+				background-size: 100% 100%;
+				margin-left: 200px;
+				margin-top: 300px;
+				border: 5px white solid;
+			}
+			
+			#arduinoDiv {
+				background-image: url("ArduinoPic.jpg");
+				background-size: 100% 100%;
+				margin-left: 500px;
+				margin-top: 500px;
+				border: 5px white solid;
+			}
+			
+			#scribDiv {
+				background-image: url("BestPictureEver.png");
+				background-size: 100% 100%;
+				margin-left: 900px;
+				margin-top: 400px;
+				border: 5px white solid;
+			}
+		</style>
+	</body>
+</html>
