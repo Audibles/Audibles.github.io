@@ -7,12 +7,20 @@
 	<body background="spaceBackground.jpg">
 		<div id="container">
 				<div class="bubble" id="main">Audrey Thompson</div>
+				<div class="bubble" id="mainPic"><img src="audreyHeadshot.jpg"/></div>
 				<div class="bubble" id="about">About</div>
 				<div class="bubble" id="contact">Contact</div>
 				<div class="bubble" id="resume">Resume</div>
 		</div>
 		
 		<style>
+			img {
+				border-radius: 100%;
+				width: 395px;
+				height: 395px;
+				left: 245px;
+				top: 185px;
+			}
 			.bubble {
 				background-color: black;
 				position: absolute;		
@@ -22,12 +30,13 @@
 				margin: 0 auto;
 				left: 760px;
 				top: 295px;
-				text-align: center;
-				vertical-align: middle;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				color: white;
-				line-height: 200px;
 				font-family: Aloha;
 				font-size: 25px;
+				z-index: 1;
 			}
 			
 			#main {
@@ -35,8 +44,17 @@
 				height: 400px;
 				left: 250px;
 				top: 190px;
-				line-height: 400px;
 				font-size: 35px;
+				position: absolute;
+			}
+			
+			#mainPic {
+				width: 400px;
+				height: 400px;
+				left: 250px;
+				top: 190px;
+				position: absolute;
+				z-index: 0;
 			}
 			
 			#contact {
@@ -44,7 +62,6 @@
 				height: 250px;
 				left: 1060px;
 				top: 275px;
-				line-height: 250px;
 				font-size: 30px;
 			}
 			
@@ -54,7 +71,6 @@
 				left: 650px;
 				top: 140px;
 				font-size: 20px;
-				line-height: 100px;
 			}
 			
 			#container { 
@@ -71,9 +87,74 @@
 		</style>
 		
 		<script>
-			$("#main").click(function(){
-				$(this).animate({left: '250px'});
-			}); 
+			$(document).ready(function() {
+				
+				//Main div
+				$( "#main" ).mouseenter(function(){
+					$( this ).animate({
+						opacity: 0.1
+					}, 400, function() {});
+				});
+				$( "#main" ).mouseleave(function(){
+					$( this ).animate({
+						opacity: 1
+					}, 400, function() {});
+				});
+				
+				//About div
+				$( "#about" ).mouseenter(function(){
+					$( this ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
+					}, 400, function() {});
+				});
+				$( "#about" ).mouseleave(function(){
+					$( this ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
+					}, 400, function() {});
+				});
+				
+				//Contact div
+				$( "#contact" ).mouseenter(function(){
+					$( this ).animate({
+						width: "+=15px",
+						height: "+=15px",
+						left: "-=7.5px",
+						top: "-=7.5px"
+					}, 400, function() {});
+				});
+				$( "#contact" ).mouseleave(function(){
+					$( this ).animate({
+						width: "-=15px",
+						height: "-=15px",
+						left: "+=7.5px",
+						top: "+=7.5px"
+					}, 400, function() {});
+				});
+				
+				//Resume div
+				$( "#resume" ).mouseenter(function(){
+					$( this ).animate({
+						width: "+=15px",
+						height: "+=15px",
+						left: "-=7.5px",
+						top: "-=7.5px"
+					}, 400, function() {});
+				});
+				$( "#resume" ).mouseleave(function(){
+					$( this ).animate({
+						width: "-=15px",
+						height: "-=15px",
+						left: "+=7.5px",
+						top: "+=7.5px"
+					}, 400, function() {});
+				});
+			});			
 		</script>
 	</body>
 </html>
