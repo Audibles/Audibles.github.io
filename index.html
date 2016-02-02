@@ -8,14 +8,18 @@
 	<body background="spaceBackground.jpg">
 		<div id="container">
 				<div class="bubble" id="main">Audrey Thompson</div>
-				<div class="bubble" id="mainPic"><img src="audreyHeadshot.jpg"/></div>
+				<div class="bubble" id="mainPic"><img src="audreyHeadshot.jpg" id="headshot"/></div>
 				<div class="bubble" id="about">About</div>
 				<div class="bubble" id="contact">Contact</div>
+				<a href="https://www.facebook.com/audrey.thompson.773776"><div class="bubble" id="fb"><img src="fbIcon.png" class="icon"/></div></a>
+				<a href="https://github.com/Audibles"><div class="bubble" id="github"><img src="githubIcon.png" class="icon"/></div></a>
+				<a href="https://www.linkedin.com/in/adthomp"><div class="bubble" id="linkedIn"><img src="linkedinIcon.png" class="icon"/></div></a>
 				<a href="AudreyThompsonResume.pdf"><div class="bubble" id="resume">Resume</div></a>
+				<a href="mailto:audreydnthompson@gmail.com"><div class="bubble" id="gmail"><img src="gmailIcon.png" class="icon"/></div></s>
 		</div>
 		
 		<style>
-			img {
+			#headshot {
 				border-radius: 100%;
 				width: 395px;
 				height: 395px;
@@ -74,6 +78,40 @@
 				font-size: 20px;
 			}
 			
+			#fb {
+				width: 100px;
+				height: 100px;
+				left: 1025px;
+				top: 150px;
+			}
+			
+			#github {
+				width: 100px;
+				height: 100px;
+				left: 1200px;
+				top: 150px;
+			}
+			
+			#linkedIn {
+				width: 100px;
+				height: 100px;
+				left: 1350px;
+				top: 260px;
+			}
+			
+			#gmail {
+				width: 100px;
+				height: 100px;
+				left: 1350px;
+				top: 430px;
+			}
+			
+			.icon {
+				width: 100px;
+				height: 100px;
+				border-radius: 100%;
+			}
+			
 			#container { 
 				width: 700px; 
 				height: 700px;
@@ -117,19 +155,67 @@
 				
 				//Contact div
 				$( "#contact" ).mouseenter(function(){
-					$( this ).animate({
-						width: "+=15px",
-						height: "+=15px",
-						left: "-=7.5px",
-						top: "-=7.5px"
+					$( ".icon" ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
+					}, 400, function() {});
+					$( "#fb" ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
+					}, 400, function() {});
+					$( "#github" ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
+					}, 400, function() {});
+					$( "#linkedIn" ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
+					}, 400, function() {});
+					$( "#gmail" ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
 					}, 400, function() {});
 				});
 				$( "#contact" ).mouseleave(function(){
-					$( this ).animate({
-						width: "-=15px",
-						height: "-=15px",
-						left: "+=7.5px",
-						top: "+=7.5px"
+					$( ".icon" ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
+					}, 400, function() {});
+					$( "#fb" ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
+					}, 400, function() {});
+					$( "#github" ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
+					}, 400, function() {});
+					$( "#linkedIn" ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
+					}, 400, function() {});
+					$( "#gmail" ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
 					}, 400, function() {});
 				});
 				
