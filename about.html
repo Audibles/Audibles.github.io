@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Audrey Thompson</title>
+		<script src="jquery-1.12.0.js" type="text/javascript"></script>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	</head>
+	<body background="spaceBackground.jpg">
+		<div id="container">
+			<div class="bubble" id="title">About Audrey Thompson</div>
+			<div class="bubble" id="main">
+				Audrey Thompson is a current high school senior expecting to graduate in June 2016. She plans
+				to start college in fall 2016 with a double major in computer science and game design. She has programming skills in a variety of languages,
+				including Java, Python, JavaScript, and HTML/CSS, and has taken many classes in these languages such as AP Computer Science, 
+				the Girls Who Code summer immersion program, and several online courses. Her other interests and skills lie in martial arts, track and field, theater, reading,
+				and both playing and creating video games.
+			</div>
+			<a href="index.html"><div class="bubble" id="back">Back to home</div></a>
+		</div>
+		<style>
+			.bubble {
+				background-color: black;
+				position: absolute;		
+				width: 200px;
+				height: 200px;
+				border-radius: 100%;
+				margin: 0 auto;
+				left: 760px;
+				top: 295px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 25px;
+				z-index: 1;
+			}
+			
+			#title {
+				width: 200px;
+				height: 200px;
+				font-size: 25px;
+				top: 100px;
+				left: 350px;
+			}
+			
+			#main {
+				width: 550px;
+				height: 550px;
+				top: 150px;
+				left: 510px;
+				font-size: 20px;
+				padding: 20pt;
+			}
+			
+			#back {
+				font-size: 20px;
+				width: 100px;
+				height: 100px;
+				background-color: white;
+				color: black;
+				left: 1100px;
+				top: 150px;
+			}
+			
+			#container { 
+				width: 700px; 
+				height: 700px;
+				margin: 10px auto; 
+				position: absolute;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				$( "#back" ).mouseenter(function(){
+					$( this ).animate({
+						width: "+=10px",
+						height: "+=10px",
+						left: "-=5px",
+						top: "-=5px"
+					}, 400, function() {});
+				});
+				$( "#back" ).mouseleave(function(){
+					$( this ).animate({
+						width: "-=10px",
+						height: "-=10px",
+						left: "+=5px",
+						top: "+=5px"
+					}, 400, function() {});
+				});
+			});
+		</script>
+	</body>
+</html>
