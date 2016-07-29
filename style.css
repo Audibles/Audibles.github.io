@@ -1,20 +1,19 @@
-#container { 
-	width: 100%; 
-	height: auto;
-	margin: 10px auto; 
-	position: absolute;
-}
-
 #headshot {
 	border-radius: 100%;
 	width: 395px;
 	height: 395px;
+	left: 245px;
+	top: 185px;
 }
-
 .bubble {
 	background-color: black;
-	position: relative;		
+	position: absolute;		
+	width: 200px;
+	height: 200px;
 	border-radius: 100%;
+	margin: 0 auto;
+	left: 760px;
+	top: 295px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -22,68 +21,79 @@
 	font-family: 'Montserrat', sans-serif;
 	font-size: 25px;
 	z-index: 1;
-	margin: 10% 5% 5% 5%;
-	text-decoration: none;
 }
-		
+	
 #main {
-	position: absolute;
 	width: 400px;
 	height: 400px;
+	left: 250px;
+	top: 190px;
 	font-size: 35px;
-	left: 10%;
+	position: absolute;
 }
 			
 #mainPic {
-	position: absolute;
 	width: 400px;
 	height: 400px;
+	left: 250px;
+	top: 190px;
+	position: absolute;
 	z-index: 0;
-	left: 10%;
 }
-		
+	
 #contact {
 	width: 250px;
 	height: 250px;
+	left: 1060px;
+	top: 275px;
 	font-size: 30px;
-	left: 70%;
 }
 			
 #about {
 	width: 100px;
 	height: 100px;
+	left: 650px;
+	top: 140px;
 	font-size: 20px;
-	left: 34%;
-}
-
-#resume {
-	width: 200px;
-	height: 200px;
-	font-size: 25px;
 }
 			
 #fb {
 	width: 100px;
 	height: 100px;
+	left: 1025px;
+	top: 150px;
 }
-			
+		
 #github {
 	width: 100px;
 	height: 100px;
+	left: 1200px;
+	top: 150px;
 }
 			
 #linkedIn {
 	width: 100px;
 	height: 100px;
+	left: 1350px;
+	top: 260px;
 }
-			
+		
 #gmail {
 	width: 100px;
 	height: 100px;
+	left: 1350px;
+	top: 430px;
 }
 			
 .icon {
 	width: 100px;
 	height: 100px;
 	border-radius: 100%;
+}
+			
+#container { 
+	width: 700px; 
+	height: 700px;
+	margin: 10px auto; 
+	position: absolute;
 }
