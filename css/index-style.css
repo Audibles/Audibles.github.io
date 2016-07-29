@@ -40,6 +40,13 @@
 	position: absolute;
 	z-index: 0;
 }
+
+#resume {
+	width: 220px;
+	height: 220px;
+	left: 750px;
+	top: 290px;
+}
 	
 #contact {
 	width: 250px;
@@ -57,35 +64,37 @@
 	font-size: 20px;
 }
 			
-#fb {
-	width: 100px;
-	height: 100px;
+#fb {	
+	background-image: url("../images/fbIcon.png");
+	background-size: 100%;
 	left: 1025px;
 	top: 150px;
 }
 		
 #github {
-	width: 100px;
-	height: 100px;
+	background-image: url("../images/githubIcon.png");
+	background-size: 100%;
 	left: 1200px;
 	top: 150px;
 }
 			
 #linkedIn {
-	width: 100px;
-	height: 100px;
+	background-image: url("../images/linkedinIcon.png");
+	background-size: 100%;
 	left: 1350px;
 	top: 260px;
 }
 		
 #gmail {
-	width: 100px;
-	height: 100px;
+	background-image: url("../images/gmailIcon.png");
+	background-size: 100%;
 	left: 1350px;
 	top: 430px;
 }
 			
 .icon {
+	background-color: black;
+	position: absolute;	
 	width: 100px;
 	height: 100px;
 	border-radius: 100%;
