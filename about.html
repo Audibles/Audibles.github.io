@@ -2,11 +2,13 @@
 <html>
 	<head>
 		<title>About Audrey Thompson</title>
-		<link rel="shortcut icon" type="image/x-icon" href="myIcon.png" />
-		<script src="jquery-1.12.0.js" type="text/javascript"></script>
-		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/x-icon" href="images/myIcon.png" />
+		<script src="js/jquery-1.12.0.js" type="text/javascript"></script>
+		<script src="js/about-script.js" type="text/javascript"></script>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'/>
+		<link href="css/about-style.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<body background="spaceBackground.jpg">
+	<body background="images/spaceBackground.jpg">
 		<div id="container">
 			<div class="bubble" id="title">About Audrey Thompson</div>
 			<div class="bubble" id="main">
@@ -18,79 +20,5 @@
 			</div>
 			<a href="index.html"><div class="bubble" id="back">Back to home</div></a>
 		</div>
-		<style>
-			.bubble {
-				background-color: black;
-				position: absolute;		
-				width: 200px;
-				height: 200px;
-				border-radius: 100%;
-				margin: 0 auto;
-				left: 760px;
-				top: 295px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				text-align: center;
-				color: white;
-				font-family: 'Montserrat', sans-serif;
-				font-size: 25px;
-				z-index: 1;
-			}
-			
-			#title {
-				width: 200px;
-				height: 200px;
-				font-size: 25px;
-				top: 70px;
-				left: 325px;
-			}
-			
-			#main {
-				width: 550px;
-				height: 550px;
-				top: 80px;
-				left: 510px;
-				font-size: 20px;
-				padding: 20pt;
-			}
-			
-			#back {
-				font-size: 20px;
-				width: 100px;
-				height: 100px;
-				background-color: white;
-				color: black;
-				left: 1100px;
-				top: 125px;
-			}
-			
-			#container { 
-				width: 700px; 
-				height: 700px;
-				margin: 10px auto; 
-				position: absolute;
-			}
-		</style>
-		<script>
-			$(document).ready(function() {
-				$( "#back" ).mouseenter(function(){
-					$( this ).animate({
-						width: "+=10px",
-						height: "+=10px",
-						left: "-=5px",
-						top: "-=5px"
-					}, 400, function() {});
-				});
-				$( "#back" ).mouseleave(function(){
-					$( this ).animate({
-						width: "-=10px",
-						height: "-=10px",
-						left: "+=5px",
-						top: "+=5px"
-					}, 400, function() {});
-				});
-			});
-		</script>
 	</body>
 </html>
