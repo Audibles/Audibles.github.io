@@ -1,5 +1,4 @@
 $(function() {
-
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -22,7 +21,8 @@ $(function() {
             var submit = false;
             if (submit == false) {
                 $.ajax({
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSesU9N6l5MsC-vrhDv7NOrdmWO0bXrKtJxZ8vcZi09M4fw3sw/formResponse",
+                    crossDomain: true,
+                    url: url,
                     data: {
                         formkey: "1FAIpQLSesU9N6l5MsC-vrhDv7NOrdmWO0bXrKtJxZ8vcZi09M4fw3sw",
                         "entry.287121938": name,
@@ -31,7 +31,6 @@ $(function() {
                     },
                     type: "POST",
                     dataType: "xml",
-                    cache: false,
                     statusCode: {
                         0: function () {
                             // Enable button & show success message
@@ -47,6 +46,7 @@ $(function() {
                             //clear all fields
                             $('#contactForm').trigger("reset");
                             submit = true
+                            console.log('0 happened');
                         },
                         200: function () {
                             // Enable button & show success message
@@ -62,6 +62,7 @@ $(function() {
                             //clear all fields
                             $('#contactForm').trigger("reset");
                             submit = true
+                            console.log('200 happened');
                         }
                     }
                 });
