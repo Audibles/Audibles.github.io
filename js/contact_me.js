@@ -22,7 +22,7 @@ $(function() {
             if (submit == false) {
                 $.ajax({
                     crossDomain: true,
-                    url: url,
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSesU9N6l5MsC-vrhDv7NOrdmWO0bXrKtJxZ8vcZi09M4fw3sw/formResponse",
                     data: {
                         formkey: "1FAIpQLSesU9N6l5MsC-vrhDv7NOrdmWO0bXrKtJxZ8vcZi09M4fw3sw",
                         "entry.287121938": name,
